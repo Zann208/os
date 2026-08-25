@@ -5,8 +5,12 @@ fetch('https://raw.githubusercontent.com/Zann208/os/d0a3b113ba1774265433045233c8
 .then(function(html){
 var privacy='<script>(function(){var codes=["261434","CPE434","269430","269202","269497","261305"];function c(s){var o=String(s||"");codes.forEach(function(x){o=o.replace(new RegExp("\\\\s*[·:/-]*\\\\s*"+x+"\\\\b","g"),"");});return o.replace(/\\s{2,}/g," ").trim()}function run(){document.title=c(document.title);var w=document.createTreeWalker(document.body||document.documentElement,NodeFilter.SHOW_TEXT),n;while((n=w.nextNode())){var p=n.parentElement;if(!p||/^(SCRIPT|STYLE|PRE|CODE|TEXTAREA)$/i.test(p.tagName))continue;var v=n.nodeValue,nv=c(v);if(nv!==v)n.nodeValue=nv}document.querySelectorAll("[title],[aria-label],[content]").forEach(function(el){["title","aria-label","content"].forEach(function(a){if(el.hasAttribute(a))el.setAttribute(a,c(el.getAttribute(a)))})})}run();new MutationObserver(run).observe(document.documentElement,{childList:true,subtree:true});})();<\/script>';
 html=html.replace(/<title>[\s\S]*?<\/title>/i,'<title>Operating Systems Console</title>');
-if(html.indexOf('</body>')>-1)html=html.replace('</body>',privacy+'</body>');else html+=privacy;
+if(html.indexOf('<script src="./independent-console-ui.js?v=20260825c"></script>
+</body>')>-1)html=html.replace('<script src="./independent-console-ui.js?v=20260825c"></script>
+</body>',privacy+'<script src="./independent-console-ui.js?v=20260825c"></script>
+</body>');else html+=privacy;
 document.open();document.write(html);document.close();
 })
 .catch(function(err){document.getElementById('boot').textContent='Could not load console: '+err;});
-</script></body></html>
+</script><script src="./independent-console-ui.js?v=20260825c"></script>
+</body></html>
