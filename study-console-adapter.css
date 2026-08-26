@@ -1,0 +1,7 @@
+body[data-study-console="os"]{background-image:none!important}
+body[data-study-console="os"] .shell{background:transparent!important}
+body[data-study-console="os"] #main{max-width:1120px!important;margin-inline:auto!important}
+body[data-study-console="os"] .formula{background:var(--sc-surface-2)!important;border-color:var(--sc-line)!important}
+body[data-study-console="os"] .note,body[data-study-console="os"] .tip{box-shadow:none!important;border-color:var(--sc-line)!important}
+body[data-study-console="os"] #gantt,body[data-study-console="os"] #results,body[data-study-console="os"] #bOut,body[data-study-console="os"] #rOut{max-width:100%;overflow-x:auto}
+@media(max-width:760px){body[data-study-console="os"] #main{width:100%!important;padding-inline:12px!important}}
