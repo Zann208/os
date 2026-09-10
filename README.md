@@ -1,6 +1,6 @@
 # OS — Operating Systems Study Console
 
-An offline-first, single-file study console for **261305 Operating Systems** at Chiang Mai University, following Silberschatz, Galvin & Gagne, *Operating System Concepts* (10th edition), chapters 1–8.
+An offline-first, single-file study console for **Operating Systems** at Chiang Mai University, following Silberschatz, Galvin & Gagne, *Operating System Concepts* (10th edition), chapters 1–8.
 
 **→ [Live demo](https://zann208.github.io/os/)**
 
@@ -68,5 +68,4 @@ The notes are my own restatement of course concepts, written for comprehension r
 
 ---
 
-Built by **Zann** — Information Systems & Network Engineering, Chiang Mai University
-[Portfolio](https://zann208.github.io) · [All courses](https://zann208.github.io/study/) · [Email](mailto:thuhtoozan_1@cmu.ac.th)
+[Study Console](https://zann208.github.io/study/)

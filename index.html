@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://zann208.github.io/study/shared/v2/theme-init.js"></script>
-<title>OS // 261305 Operating Systems Console</title>
-<meta name="description" content="Offline study console for 261305 Operating Systems — Silberschatz chapters 1-8, a working CPU scheduling simulator, Banker's algorithm checker, flashcards and a mock exam.">
+<title>OS // Operating Systems Console</title>
+<meta name="description" content="Offline study console for Operating Systems — Silberschatz chapters 1-8, a working CPU scheduling simulator, Banker's algorithm checker, flashcards and a mock exam.">
 <meta name="theme-color" content="#080e0c">
 <style>
 :root{
@@ -326,10 +326,10 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
   color:var(--ink);border-radius:6px;padding:5px 8px;font-family:var(--mono);font-size:12.5px}
 #bTable td{padding:5px 6px}
 
-</style><link rel="stylesheet" href="https://zann208.github.io/study/shared/v2/study-system.css?v=20260909-nav2">
+</style><link rel="stylesheet" href="https://zann208.github.io/study/shared/v2/study-system.css?v=20260910-layout2">
 <link rel="stylesheet" href="https://zann208.github.io/study/shared/v2/legacy-console.css">
 <link rel="stylesheet" href="./study-console-adapter.css">
-<link rel="stylesheet" href="https://zann208.github.io/study/shared/v2/reading.css?v=20260910-reading1">
+<link rel="stylesheet" href="https://zann208.github.io/study/shared/v2/reading.css?v=20260910-layout2">
 </head>
 <body data-study-console="os" data-console-id="os" data-console-name="Operating Systems & Scheduling">
 <a class="skip" href="#main">Skip to content</a>
@@ -341,17 +341,17 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
   <div id="csWrap">
     <button id="logoBtn" aria-haspopup="true" aria-expanded="false" title="Switch course">
       <span class="logomk"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#080e0c" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 8h4M7 12h2"/></svg></span>
-      <span class="logotx"><b>OS<i>://261305</i></b><span>by zann</span></span>
+      <span class="logotx"><b>OS<i>://STUDY</i></b><span>study console</span></span>
       <span class="caret">▼</span>
     </button>
     <div id="csPop" role="menu">
       <div class="cshead">// switch course</div>
       <a class="csrow" href="https://zann208.github.io/study/"><span class="csmk" style="color:#34d399">ALL</span><span style="flex:1"><b>All courses</b><span>semester overview</span></span><span class="csgo">HOME ↗</span></a>
-      <a class="csrow" href="https://zann208.github.io/netdes/"><span class="csmk" style="color:#22d3ee">NET</span><span style="flex:1"><b>Network Design</b><span>261434 · CPE434</span></span><span class="csgo">OPEN ↗</span></a>
-      <a class="csrow" href="https://zann208.github.io/wnet/"><span class="csmk" style="color:#38bdf8">WLN</span><span style="flex:1"><b>Wireless Networks</b><span>269430</span></span><span class="csgo">OPEN ↗</span></a>
-      <a class="csrow" href="https://zann208.github.io/algo/"><span class="csmk" style="color:#f0b429">ALG</span><span style="flex:1"><b>Algorithms for iSNE</b><span>269202 · ISNE</span></span><span class="csgo">OPEN ↗</span></a>
-      <a class="csrow" href="https://zann208.github.io/privacy/"><span class="csmk" style="color:#a78bfa">PRV</span><span style="flex:1"><b>Privacy Technologies</b><span>269497 · ISNE</span></span><span class="csgo">OPEN ↗</span></a>
-      <a class="csrow here" id="csSelf" href="#"><span class="csmk" style="color:var(--vi)">OS</span><span style="flex:1"><b>Operating Systems</b><span>261305</span></span><span class="csgo">HERE</span></a>
+      <a class="csrow" href="https://zann208.github.io/netdes/"><span class="csmk" style="color:#22d3ee">NET</span><span style="flex:1"><b>Network Design</b><span>Switching &amp; routing</span></span><span class="csgo">OPEN ↗</span></a>
+      <a class="csrow" href="https://zann208.github.io/wnet/"><span class="csmk" style="color:#38bdf8">WLN</span><span style="flex:1"><b>Wireless Networks</b><span>Wireless engineering</span></span><span class="csgo">OPEN ↗</span></a>
+      <a class="csrow" href="https://zann208.github.io/algo/"><span class="csmk" style="color:#f0b429">ALG</span><span style="flex:1"><b>Algorithms for iSNE</b><span>Algorithms &amp; data structures</span></span><span class="csgo">OPEN ↗</span></a>
+      <a class="csrow" href="https://zann208.github.io/privacy/"><span class="csmk" style="color:#a78bfa">PRV</span><span style="flex:1"><b>Privacy Technologies</b><span>Privacy &amp; security</span></span><span class="csgo">OPEN ↗</span></a>
+      <a class="csrow here" id="csSelf" href="#"><span class="csmk" style="color:var(--vi)">OS</span><span style="flex:1"><b>Operating Systems</b><span>Systems &amp; scheduling</span></span><span class="csgo">HERE</span></a>
       <div class="csfoot"><a href="https://zann208.github.io" target="_blank" rel="noopener">portfolio ↗</a><a href="https://github.com/Zann208" target="_blank" rel="noopener">github ↗</a></div>
     </div>
   </div>
@@ -361,7 +361,7 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
   <button class="tabbtn" data-tab="sched">SCHEDULER</button>
   <button class="tabbtn" data-tab="drills">DRILLS</button>
   <button class="tabbtn" data-tab="cheat">CHEATSHEET</button>
-  <button class="tabbtn" data-tab="author">AUTHOR</button>
+  <button class="tabbtn" data-tab="author">ABOUT</button>
   <span class="navsp"></span>
   <button class="iconbtn" id="searchBtn"><span>⌕</span><span class="stxt">Search</span><kbd>⌘K</kbd></button>
   <button class="iconbtn" id="themeBtn" title="Light / dark">◑</button>
@@ -382,7 +382,7 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
 <!-- ============ HOME ============ -->
 <section class="tab on" id="home"><div class="wrap">
   <h1><span class="pre">// OPERATING SYSTEMS</span>Eight chapters. One machine.</h1>
-  <p class="lede">261305 · Chiang Mai University · following Silberschatz, Galvin &amp; Gagne, <i>Operating System Concepts</i> 10th edition. How an OS shares one CPU, one memory and one disk among programs that all think they own the machine.</p>
+  <p class="lede">Chiang Mai University · following Silberschatz, Galvin &amp; Gagne, <i>Operating System Concepts</i> 10th edition. How an OS shares one CPU, one memory and one disk among programs that all think they own the machine.</p>
   <div class="chiprow">
     <span class="chip c1">Ch 1–2 · The machine</span>
     <span class="chip c2">Ch 3–4 · Processes &amp; threads</span>
@@ -888,20 +888,10 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
 
 <!-- ============ AUTHOR ============ -->
 <section class="tab" id="author"><div class="wrap">
-  <h1><span class="pre">// WHO BUILT THIS</span>Zann</h1>
+  <h1><span class="pre">// ABOUT</span>Study Console</h1>
   <p class="lede">One of five course consoles for this semester. Same shell, same shortcuts, same offline-first rule.</p>
-  <div class="panel">
-    <h3>Author</h3>
-    <div class="kv"><b>Name</b><span>Thu Htoo Zan — <b>Zann</b></span></div>
-    <div class="kv"><b>Student ID</b><span>670615524</span></div>
-    <div class="kv"><b>Programme</b><span>Information Systems &amp; Network Engineering (ISNE)</span></div>
-    <div class="kv"><b>Faculty</b><span>Faculty of Engineering, Chiang Mai University</span></div>
-    <div class="kv"><b>Email</b><span><a href="mailto:thuhtoozan_1@cmu.ac.th">thuhtoozan_1@cmu.ac.th</a></span></div>
-    <div class="kv"><b>Links</b><span><a href="https://zann208.github.io" target="_blank" rel="noopener">portfolio</a> · <a href="https://github.com/Zann208" target="_blank" rel="noopener">github</a> · <a href="https://zann208.github.io/study/" target="_blank" rel="noopener">all courses</a></span></div>
-  </div>
   <div class="panel pc">
     <h3>This course</h3>
-    <div class="kv"><b>Code</b><span>261305</span></div>
     <div class="kv"><b>Title</b><span>Operating Systems</span></div>
     <div class="kv"><b>Text</b><span>Silberschatz, Galvin &amp; Gagne — <i>Operating System Concepts</i>, 10th edition</span></div>
     <div class="kv"><b>Covered</b><span>Chapters 1–8</span></div>
@@ -914,10 +904,10 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
 </div></section>
 
 </main>
-<div class="footer">261305 Operating Systems · built by ZANN · runs entirely offline</div>
+<div class="footer">Operating Systems · runs entirely offline</div>
 </div>
 
-<div id="wm"><i>Z</i>ZANN</div>
+<div id="wm">STUDY</div>
 
 <div id="pal" role="dialog" aria-modal="true" aria-label="Search">
   <div class="palbox">
@@ -1620,7 +1610,7 @@ $('reqBtn').addEventListener('click',function(){
 });
 buildB();
 </script>
-<script src="https://zann208.github.io/study/shared/v2/study-system.js?v=20260909-nav2"></script>
+<script src="https://zann208.github.io/study/shared/v2/study-system.js?v=20260910-layout2"></script>
 <script src="https://zann208.github.io/study/shared/v2/reading.js?v=20260910-reading1" defer></script>
 </body>
 </html>
