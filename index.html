@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://zann208.github.io/study/shared/v3/boot.js?v=20261025-2" data-console="os" data-v2="index.v2.html"></script>
-<title>OS // Operating Systems Console</title>
+<script src="https://zann208.github.io/study/shared/v3/boot.js?v=20261026-1" data-console="os" data-v2="index.v2.html"></script>
+<title>Operating Systems &amp; Scheduling</title>
 <meta name="description" content="Offline study console for Operating Systems — Silberschatz chapters 1-8, a working CPU scheduling simulator, Banker's algorithm checker, flashcards and a mock exam.">
 <meta name="theme-color" content="#080e0c">
 <style>
@@ -227,43 +227,40 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
 
 <!-- ============ HOME ============ -->
 <section class="tab on" id="home"><div class="wrap">
-  <h1><span class="pre">// OPERATING SYSTEMS</span>Eight chapters. One machine.</h1>
-  <p class="lede">Chiang Mai University · following Silberschatz, Galvin &amp; Gagne, <i>Operating System Concepts</i> 10th edition. How an OS shares one CPU, one memory and one disk among programs that all think they own the machine.</p>
+  <h1>Operating Systems</h1>
+  <p class="lede">Chapters 1–8 · Silberschatz, Galvin &amp; Gagne, <i>Operating System Concepts</i>, 10th edition.</p>
   <div class="chiprow">
     <span class="chip c1">Ch 1–2 · The machine</span>
     <span class="chip c2">Ch 3–4 · Processes &amp; threads</span>
     <span class="chip c1">Ch 5 · Scheduling</span>
     <span class="chip c2">Ch 6–8 · Concurrency</span>
-    <span class="chip">live scheduler</span>
-    <span class="chip">works offline</span>
   </div>
 
   <div class="grid2">
     <div class="card">
       <span class="badge b1">Part 1</span>
-      <h3 style="margin-bottom:8px">What an OS is and does</h3>
-      <p style="font-size:14.5px">Chapters 1–2. Interrupts, dual-mode operation, system calls, and the four ways to structure a kernel. The vocabulary everything else is written in.</p>
+      <h3 style="margin-bottom:8px">OS structure</h3>
+      <p style="font-size:14.5px">Chapters 1–2. Interrupts, dual-mode operation, system calls, kernel structures.</p>
     </div>
     <div class="card">
       <span class="badge b2">Part 2</span>
       <h3 style="margin-bottom:8px">Processes, threads, scheduling</h3>
-      <p style="font-size:14.5px">Chapters 3–5. What a process actually is, how threads differ, and the algorithms that decide who gets the CPU next — with the arithmetic the exam asks for.</p>
+      <p style="font-size:14.5px">Chapters 3–5. Processes, threads, CPU scheduling algorithms and their calculations.</p>
     </div>
     <div class="card">
       <span class="badge b1">Part 3</span>
       <h3 style="margin-bottom:8px">Concurrency and deadlock</h3>
-      <p style="font-size:14.5px">Chapters 6–8. Race conditions, the critical-section problem, mutexes, semaphores, monitors, the classic problems — and the four conditions that produce deadlock.</p>
+      <p style="font-size:14.5px">Chapters 6–8. Race conditions, the critical-section problem, mutexes, semaphores, monitors, classic problems, deadlock.</p>
     </div>
     <div class="card">
       <span class="badge gr">Tools</span>
-      <h3 style="margin-bottom:8px">Two working solvers</h3>
-      <p style="font-size:14.5px">A <b>CPU scheduling simulator</b> that draws the Gantt chart and computes waiting and turnaround time for six algorithms, and a <b>Banker's algorithm</b> checker that finds the safe sequence.</p>
+      <h3 style="margin-bottom:8px">Solvers</h3>
+      <p style="font-size:14.5px">CPU scheduling simulator (Gantt chart, waiting and turnaround time, six algorithms) and Banker's algorithm safety check.</p>
     </div>
   </div>
 
   <div class="panel">
-    <h3>The one idea that connects all eight chapters</h3>
-    <p>Every chapter is the same question asked about a different resource: <b>how do you share one thing among many claimants without them noticing, corrupting each other, or getting stuck?</b></p>
+    <h3>Shared resource by chapter</h3>
     <div class="tscroll"><table>
       <tr><th>Chapter</th><th>The shared thing</th><th>The mechanism</th></tr>
       <tr><td class="mono">1–2</td><td>the whole machine</td><td>dual-mode operation, interrupts, system calls</td></tr>
@@ -275,13 +272,11 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
     </table></div>
   </div>
 
-  <div class="box wild"><b>How to use this</b>Read a chapter, then go straight to <b>Scheduler</b> and make it compute something. The scheduling arithmetic and the Banker's algorithm are the two places this course reliably takes marks off people, and they are both mechanical once you have seen them work.</div>
 </div></section>
 
 <!-- ============ CHAPTERS ============ -->
 <section class="tab" id="chapters"><div class="wrap">
-  <h1><span class="pre">// LEARN</span>Chapters</h1>
-  <p class="lede">All eight chapters, written for understanding rather than transcription. Open one box at a time — each is one idea you could be asked to explain out loud.</p>
+  <h1>Chapters</h1>
 
   <details class="note" open>
     <summary><span class="num n1">1</span> Introduction — what an OS actually is</summary>
@@ -553,8 +548,7 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
 
 <!-- ============ SCHEDULER ============ -->
 <section class="tab" id="sched"><div class="wrap">
-  <h1><span class="pre">// SOLVERS</span>Scheduler &amp; Banker's</h1>
-  <p class="lede">Two working implementations, not lookup tables. Type in any process table and the scheduler runs the real algorithm, draws the Gantt chart and computes every column the exam asks for.</p>
+  <h1>Scheduler &amp; Banker's</h1>
 
   <div class="panel">
     <h2 class="title" style="font-size:21px">CPU scheduling simulator</h2>
@@ -646,7 +640,7 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
     </div>
     <div id="rOut" style="margin-top:12px"></div>
 
-    <div class="box wild" style="margin-top:16px"><b>How the algorithm reads</b>
+    <div class="box wild" style="margin-top:16px"><b>Safety check</b>
     <b>Need = Max − Allocation.</b> A state is <b>safe</b> if you can order every process so each one's remaining Need fits in what is Available plus what the earlier ones give back when they finish. Grant a request only if the state <i>after</i> pretending to grant it is still safe.
     <br><br>Safe means deadlock is impossible. <b>Unsafe does not mean deadlocked</b> — only that deadlock has become possible, which is why avoidance refuses to go there.</div>
   </div>
@@ -654,8 +648,7 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
 
 <!-- ============ DRILLS ============ -->
 <section class="tab" id="drills"><div class="wrap">
-  <h1><span class="pre">// TRAINING</span>Drills</h1>
-  <p class="lede">Cards to make the definitions automatic, then a mock exam that explains every answer.</p>
+  <h1>Drills</h1>
 
   <div class="panel" id="flash">
     <h2 class="title" style="font-size:21px">Flashcards</h2>
@@ -691,8 +684,7 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
 
 <!-- ============ CHEATSHEET ============ -->
 <section class="tab" id="cheat"><div class="wrap">
-  <h1><span class="pre">// LAST LOOK</span>Cheat Sheet</h1>
-  <p class="lede">Every formula, list and number on one screen.</p>
+  <h1>Cheat Sheet</h1>
   <div class="cheat">
 
     <h3><span class="badge b1">Ch 5</span> The three formulas</h3>
@@ -734,8 +726,7 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
 
 <!-- ============ AUTHOR ============ -->
 <section class="tab" id="author"><div class="wrap">
-  <h1><span class="pre">// ABOUT</span>Study Console</h1>
-  <p class="lede">One of five course consoles for this semester. Same shell, same shortcuts, same offline-first rule.</p>
+  <h1>About</h1>
   <div class="panel pc">
     <h3>This course</h3>
     <div class="kv"><b>Title</b><span>Operating Systems</span></div>
@@ -745,11 +736,11 @@ ol li::marker{font-family:var(--mono);color:var(--vi);font-size:12.5px}
   <div class="box trap"><b>On the content</b>These notes are my own restatement of course concepts, written for revision. Lecture slides and textbook figures remain the property of their authors and are not redistributed here.</div>
   <div class="panel pg">
     <h3>Built with</h3>
-    <p>Vanilla HTML, CSS and JavaScript. No framework, no build step, no dependencies, no network calls. The scheduling simulator and Banker's checker are real implementations — every worked example on this site is produced by running them.</p>
+    <p>HTML, CSS and JavaScript. No framework or build step.</p>
   </div>
 </div></section>
 
-<div class="footer">Operating Systems · runs entirely offline</div>
+<div class="footer">Operating Systems</div>
 </main>
 
 
